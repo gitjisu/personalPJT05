@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class='text-center'>NEW</h1>
+  <hr>
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit"  class="btn btn-primary btn-sm" value="등록하기">
+  </form>
+  <hr>
+  <a href="{% url 'movies:index' %}" class="btn btn-primary btn-sm">목록으로 돌아가기</a>
+
+{% endblock content %}
